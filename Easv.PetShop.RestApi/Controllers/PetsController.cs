@@ -21,7 +21,7 @@ namespace Easv.PetShop.RestApi.Controllers
         }
 
         // GET api/values
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         public ActionResult<IEnumerable<Pet>> Get([FromQuery] Filter filter)
         {
@@ -39,7 +39,7 @@ namespace Easv.PetShop.RestApi.Controllers
         }
 
         // GET api/values/5
-        [Authorize(Roles = "Administrator")]
+        //[Authorize(Roles = "Administrator")]
         [HttpGet("{id}")]
         public ActionResult<Pet> Get(int id)
         {
@@ -56,7 +56,7 @@ namespace Easv.PetShop.RestApi.Controllers
         }
 
         // POST api/values
-        [Authorize(Roles = "Administrator")]
+       // [Authorize(Roles = "Administrator")]
         [HttpPost]
         public ActionResult<Pet> Post([FromBody] Pet pet)
         {
@@ -73,7 +73,7 @@ namespace Easv.PetShop.RestApi.Controllers
         }
 
         // PUT api/values/5
-        [Authorize(Roles = "Administrator")]
+       // [Authorize(Roles = "Administrator")]
         [HttpPut("{id}")]
         public ActionResult<Pet> Put(int id, [FromBody] Pet pet)
         {
@@ -93,7 +93,7 @@ namespace Easv.PetShop.RestApi.Controllers
         }
 
         // DELETE api/values/5
-        [Authorize(Roles = "Administrator")]
+      //  [Authorize(Roles = "Administrator")]
         [HttpDelete("{id}")]
         public ActionResult<Pet> Delete(int id)
         {
