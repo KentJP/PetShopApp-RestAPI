@@ -88,17 +88,7 @@ namespace PetShopApp.Core.ApplicationService.Service
 
         public Pet UpdatePetInfoServ(Pet petUpdate)
         {
-
-
-            var list = _petRepo.GetAllPetsRepo();
-            if (list.Any(pet => pet.id == petUpdate.id))
-            {
-                return _petRepo.UpdatePetInfoRepo(petUpdate);
-            }
-            else
-            {
-                throw new Exception("No Pet with the id " + petUpdate.id + " could be found");
-            }
+            return _petRepo.UpdatePetInfoRepo(petUpdate);
         }
 
         public List<Pet> GetFilteredPets(Filter filter)

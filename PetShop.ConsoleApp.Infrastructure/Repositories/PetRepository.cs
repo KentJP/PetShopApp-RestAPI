@@ -76,6 +76,7 @@ namespace PetShop.ConsoleApp.Infrastructure.Data.Repositories
         public Pet UpdatePetInfoRepo(Pet petUpdate)
         {
             _ctx.Attach(petUpdate).State = EntityState.Modified;
+            _ctx.Entry(petUpdate).Reference(o => o.previousOwner).IsModified = true;
             _ctx.SaveChanges();
             return petUpdate;
         }
