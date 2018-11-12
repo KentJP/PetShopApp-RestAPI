@@ -111,7 +111,6 @@ namespace Easv.PetShop.RestApi
                 {
                     var ctx = scope.ServiceProvider.GetService<PetShopContext>();
                     ctx.Database.EnsureCreated();
-                    DBinitializer.SeedDB(ctx);
                 }
                 app.UseHsts();
             }
